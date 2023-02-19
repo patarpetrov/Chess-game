@@ -1,0 +1,10 @@
+Urgent:
+Making class for every type of piece which inherits the main Piece class - that way I can remove the long if- statements in Piece class. 
+Rewrite the rules of every piece with better more readable code.
+Configure the rules so the pawns on the start of the game can move 2 squares ahead.
+
+Ideas:
+Add timer for each player.
+Display which player turn it is.
+Add checkmate.
+Display the killed pieces.
