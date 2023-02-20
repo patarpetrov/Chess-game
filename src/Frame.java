@@ -8,16 +8,14 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class Frame extends JFrame {
-    LinkedList<Piece> ps;
     JPanel main;
     JPanel background;
-    Frame(LinkedList<Piece> ps) {
+    Frame() {
         this.setTitle("Chess game");
         this.setBounds(10, 10, 512, 612);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true);
         this.setResizable(true);
-        this.ps = ps;
         this.main = new JPanel();
         this.background = new JPanel();
     }
@@ -59,7 +57,7 @@ public class Frame extends JFrame {
                 }
                 //painting the pieces
 
-                for (Piece p : ps) {
+                for (Piece p : Game.ps) {
                     int index1 = 0;
                     if (p.name.equalsIgnoreCase("king")) {
                         index1 = 0;
