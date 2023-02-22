@@ -13,6 +13,10 @@ public class Game {
         MouseListeners.addMouseListeners();
 
     }
+    public static void endGame(){
+        window.setVisible(false);
+        window.dispose();
+    }
     private static void buildWindow(){
         window = new Frame();
         window.drawBoard();

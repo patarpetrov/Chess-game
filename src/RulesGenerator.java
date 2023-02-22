@@ -4,11 +4,14 @@ public class RulesGenerator {
     public static boolean[][] generatePawnRules(Piece p){
         allowedMoves1 = new boolean[8][8];
         int change;
+        int firstmove;
         if(p.isWhite){
             change = -1;
+            firstmove = -2;
         }
         else{
             change = 1;
+            firstmove = 2;
         }
         System.out.println(5 + change);
         System.out.println("============================");
@@ -17,6 +20,11 @@ public class RulesGenerator {
             if (Game.Map[p.yp + change][p.xp] == null){
                 System.out.println("1");
                 allowedMoves1[p.yp+ change][p.xp] = true;
+            }
+            if ((p.yp == 6 && p.isWhite == true)||(p.yp == 1 && p.isWhite == false)){
+                if (Game.Map[p.yp + firstmove][p.xp] == null){
+                    allowedMoves1[p.yp + firstmove][p.xp] = true;
+                }
             }
         }
         catch (ArrayIndexOutOfBoundsException e){}

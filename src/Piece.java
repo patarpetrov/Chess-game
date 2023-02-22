@@ -79,6 +79,9 @@ public class Piece {
         }
     }
     public void kill(){
+        if (this.name.equals("king")){
+            Game.endGame();
+        }
         Game.Map[this.yp][this.xp] = null;
         Game.ps.remove(this);
     }

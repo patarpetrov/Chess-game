@@ -21,6 +21,7 @@ public class MouseListeners {
             public void mouseReleased(MouseEvent e) {
                 //try{
                     //System.out.println("SELECTED PIECE: " + selectedPiece.name);
+                if (selectedPiece != null){
                     if(selectedPiece.isWhite == Game.iswhiteturn) {
                         if (selectedPiece.move((e.getX() - 5) / 64, (e.getY() - 32) / 64)) {
                             Game.iswhiteturn = !Game.iswhiteturn;
@@ -30,6 +31,7 @@ public class MouseListeners {
                     else{
                         System.out.println("It`s not your turn");
                     }
+                }
                 //}catch(NullPointerException e1){}
             }
 
